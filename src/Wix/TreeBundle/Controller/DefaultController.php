@@ -108,7 +108,7 @@ class DefaultController extends Controller
      * @return array
      *
      */
-    protected function itemsTree($items, $parentId = NULL)
+    public function itemsTree($items, $parentId = NULL)
     {
         $keys = [];
         $values = [];
@@ -143,7 +143,7 @@ class DefaultController extends Controller
      * @return array
      *
      */
-    protected function itemsTreeRecursion($items)
+    public function itemsTreeRecursion($items)
     {
         $array = [];
 
