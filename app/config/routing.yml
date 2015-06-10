@@ -1,0 +1,3 @@
+wix_tree:
+    resource: "@WixTreeBundle/Resources/config/routing.xml"
+    prefix:   /

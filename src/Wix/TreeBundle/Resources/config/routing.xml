@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<routes xmlns="http://symfony.com/schema/routing"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
+
+    <route id="wix_tree_homepage" path="/">
+        <default key="_controller">WixTreeBundle:Default:index</default>
+    </route>
+
+    <route id="wix_tree_new" path="/new" methods="GET">
+        <default key="_controller">WixTreeBundle:Default:new</default>
+    </route>
+
+    <route id="wix_tree_create" path="/new" methods="POST">
+        <default key="_controller">WixTreeBundle:Default:create</default>
+    </route>
+</routes>

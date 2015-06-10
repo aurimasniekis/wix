@@ -1,0 +1,38 @@
+{% extends '::base.html.twig' %}
+
+{% import 'WixTreeBundle:Default:recursiveTreeMacro.html.twig' as macros %}
+
+{% block body -%}
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Item list Iterative</h3>
+        </div>
+        <div class="panel-body">
+            {#<ul>#}
+                {#{% for item in items %}#}
+                    {#<li>{{ item.name }}</li>#}
+                {#{% endfor %}#}
+            {#</ul>#}
+
+            {{ dump(items) }}
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Item list Recursive</h3>
+        </div>
+        <div class="panel-body">
+            {#<ul>#}
+                {#{{ macros.tree(recursiveItems) }}#}
+            {#</ul>#}
+
+            {{ dump(recursiveItems) }}
+        </div>
+    </div>
+
+    <a class="btn btn-success" href="{{ path('wix_tree_new') }}">
+        Create a new item
+    </a>
+{% endblock %}
+

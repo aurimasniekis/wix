@@ -1,0 +1,12 @@
+{% macro tree(items) %}
+    {% for item in items%}
+        <li>
+            <span>{{ item.name }}</span>
+            {% if item.children %}
+                <ul>
+                    {{ _self.tree(item.children) }}
+                </ul>
+            {% endif %}
+        </li>
+    {% endfor %}
+{% endmacro %}
